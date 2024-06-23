@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 14 60% 29%; /* Adjusted to a darker shade of #873e23 */
+      --card: 0 0% 100%;
+      --card-foreground: 14 60% 29%; /* Adjusted to a darker shade of #873e23 */
+      --popover: 0 0% 100%;
+      --popover-foreground: 14 60% 29%; /* Adjusted to a darker shade of #873e23 */
+      --primary: 14 60% 29%; /* Adjusted to a shade of #873e23 */
+      --primary-foreground: 0 0% 100%; /* White text for contrast */
+      --secondary: 14 60% 89%; /* Lighter shade of #873e23 */
+      --secondary-foreground: 14 60% 29%; /* Adjusted to a darker shade of #873e23 */
+      --muted: 14 60% 89%; /* Lighter shade of #873e23 */
+      --muted-foreground: 14 60% 29%; /* Adjusted to a darker shade of #873e23 */
+      --accent: 14 60% 89%; /* Lighter shade of #873e23 */
+      --accent-foreground: 14 60% 29%; /* Adjusted to a darker shade of #873e23 */
+      --destructive: 0 84.2% 60.2%; /* Keep this for red destructive */
+      --destructive-foreground: 0 0% 100%; /* White text for contrast */
+      --border: 14 60% 89%; /* Lighter shade of #873e23 */
+      --input: 14 60% 89%; /* Lighter shade of #873e23 */
+      --ring: 14 60% 29%; /* Adjusted to a darker shade of #873e23 */
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 14 60% 20%; /* Darker background shade */
+      --foreground: 0 0% 100%; /* White text for contrast */
+      --card: 14 60% 20%; /* Darker background shade */
+      --card-foreground: 0 0% 100%; /* White text for contrast */
+      --popover: 14 60% 20%; /* Darker background shade */
+      --popover-foreground: 0 0% 100%; /* White text for contrast */
+      --primary: 0 0% 100%; /* White text for contrast */
+      --primary-foreground: 14 60% 29%; /* Adjusted to a darker shade of #873e23 */
+      --secondary: 14 60% 40%; /* Slightly lighter shade for contrast */
+      --secondary-foreground: 0 0% 100%; /* White text for contrast */
+      --muted: 14 60% 40%; /* Slightly lighter shade for contrast */
+      --muted-foreground: 0 0% 100%; /* White text for contrast */
+      --accent: 14 60% 40%; /* Slightly lighter shade for contrast */
+      --accent-foreground: 0 0% 100%; /* White text for contrast */
+      --destructive: 0 62.8% 30.6%; /* Dark red for destructive */
+      --destructive-foreground: 0 0% 100%; /* White text for contrast */
+      --border: 14 60% 40%; /* Slightly lighter shade for contrast */
+      --input: 14 60% 40%; /* Slightly lighter shade for contrast */
+      --ring: 14 60% 29%; /* Adjusted to a darker shade of #873e23 */
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.h1 {
+  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+}
+
+.h2 {
+  @apply text-4xl font-bold;
+}
+
+.h3 {
+  @apply text-3xl font-bold;
+}
+
+.h4 {
+  @apply text-[22px] font-semibold;
+}
+
+.subtitle {
+  @apply text-muted-foreground text-lg mb-8 font-light;
+}
+
+.section-title {
+  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3 before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:bg-center before:w-[24px] before:h-[24px];
+}
+
+.badge {
+  @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4;
+}
+
+/* swiper bullets styles */
+.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  @apply bg-primary;
+}
